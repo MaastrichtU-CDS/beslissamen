@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script type="text/javascript" src="launch.service.js"></script>
+</head>
+<body style="overflow:hidden">
+   <div class="container">
+   
+     <iframe id="pda_iframe"
+        style="overflow: hidden; border-style: none; margin:0px; width:100%; height:100vh"></iframe>
+   
+     <!-- login modal -->
+     <div class="modal fade" id="loginModal" role="dialog">
+       <div class="modal-content modal-dialog">
+           <div class="modal-header">
+             <h4 class="modal-title">Keuzehulp inlogvenster</h4>
+           </div>
+           <div class="modal-body">
+              <form role="form" name="loginForm">
+                <div class="form-group">
+                    Om deze keuzehulp te gebruiken is een inlogcode vereist. 
+                    Deze inlogcode wordt verstrekt door uw behandelend arts. 
+                    Gelieve de inlogcode hieronder in te geven.
+                </div>
+                <div class="form-group">
+                    <div class="form-group">
+                      <label for="loginCode">Inlogcode</label>
+                      <div id="loginCode">
+                        <input type="text" class="form-control" name="loginCode" oninput="document.getElementById('login-alert').innerHTML='';">
+                      </div>
+                    </div>
+                    <p id="login-alert"></p>
+                </div>
+              </form>
+              <div class="form-group">
+              <button type="submit" class="btn btn-default" onclick=validateLogin()>Ga verder</button>
+              </div>
+           </div>
+       </div>
+     </div>
+     
+   </div>
+</body>
+</html>
+
+ 
