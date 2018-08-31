@@ -2,7 +2,7 @@ server:
    port: 8081
    
 spring:
-   profiles.active: dev
+   profiles.active: prod
    security:
        user:
           name: beslissamen
