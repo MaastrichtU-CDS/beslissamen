@@ -2,15 +2,13 @@ version: '2'
 services:
     beslis_db:
         image: postgres:10.4
-        # volumes:
-        #     - ~/volumes/beslissamen/beslissamenbackend/postgresql/:/var/lib/postgresql/data/
+        volumes:
+            - ./database/:/var/lib/postgresql/data/
         environment:
             - POSTGRES_USER=beslissamen
             - POSTGRES_PASSWORD=AblexaVerEsT
-        # ports:
-        #     - 5432:5432
     beslis_backend:
-        image: mdw/beslissamen
+        image: registry.gitlab.com/medicaldataworks/beslissamen/backend
         ports:
             - 8081:8081
         links:
