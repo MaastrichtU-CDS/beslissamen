@@ -1,0 +1,34 @@
+server:
+   port: 8081
+   
+spring:
+   profiles.active: dev
+   security:
+       user:
+          name: beslissamen
+          password: AblexaVerEsT
+   datasource:
+       url: jdbc:postgresql://dbhost:5432/beslissamen
+       username: beslissamen
+       password: AblexaVerEsT
+   jpa:
+       hibernate.ddl-auto: update
+       properties.hibernate.jdbc.lob.non_contextual_creation: true #https://github.com/pgjdbc/pgjdbc/issues/1102
+
+
+logging:
+  file: beslis-samen-backend.log
+  level:
+    nl.maastro: INFO
+
+swagger:
+  title: Beslis-samen-backend
+  description: Backend for beslissamen.nl
+
+beslis-samen:
+  # Timeout in milliseconds of inactivity before session is suspended
+  session-inactivity-timeout: 5000
+
+cors.allowed-origins:
+    - http://beslissamen.nl
+    - https://beslissamen.nl
