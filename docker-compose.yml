@@ -1,0 +1,25 @@
+version: '2'
+services:
+    beslis_db:
+        image: postgres:10.4
+        # volumes:
+        #     - ~/volumes/beslissamen/beslissamenbackend/postgresql/:/var/lib/postgresql/data/
+        environment:
+            - POSTGRES_USER=beslissamen
+            - POSTGRES_PASSWORD=AblexaVerEsT
+        # ports:
+        #     - 5432:5432
+    beslis_backend:
+        image: mdw/beslissamen
+        ports:
+            - 8081:8081
+        links:
+            - beslis_db:dbhost
+        depends_on:
+            - "beslis_db"
+    beslis_frontend:
+        image: nginx:alpine
+        ports:
+            - 80:80
+        volumes:
+            - ./website/:/usr/share/nginx/html:ro
