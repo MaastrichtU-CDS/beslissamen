@@ -32,3 +32,5 @@ beslis-samen:
 cors.allowed-origins:
     - http://beslissamen.nl
     - https://beslissamen.nl
+    - http://www.beslissamen.nl
+    - https://www.beslissamen.nl
