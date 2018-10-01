@@ -6,7 +6,7 @@ services:
   - docker:dind
 
 before_script:
-  - apt install -y openjdk-8-jdk
+  - apt update && apt install -y openjdk-8-jdk
   - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
 
 build:
