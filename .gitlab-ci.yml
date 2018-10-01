@@ -22,7 +22,7 @@ build:
     - master
     
 dockerize:
-  stage: dockerize
+  stage: build
   tags:
     - maastro
   script:
