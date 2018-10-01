@@ -20,6 +20,8 @@ build:
     
 dockerize:
   stage: build
+  dependencies:
+    - build
   tags:
     - maastro
   script:
