@@ -5,6 +5,12 @@ image: docker:latest
 services:
   - docker:dind
 
+stages:
+  - build
+  - dockerize
+  - acceptance
+  - release
+
 buildJava:
   stage: build
   image: maven:latest
@@ -19,7 +25,9 @@ buildJava:
     - master
     
 dockerize:
-  stage: build
+  stage: dockerize
+  dependencies:
+    - buildJava
   tags:
     - maastro
   script:
