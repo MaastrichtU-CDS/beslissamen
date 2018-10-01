@@ -5,7 +5,7 @@ image: docker:latest
 services:
   - docker:dind
 
-build:
+buildJava:
   stage: build
   image: maven:latest
   artifacts:
@@ -21,7 +21,7 @@ build:
 dockerize:
   stage: build
   dependencies:
-    - build
+    - buildJava
   tags:
     - maastro
   script:
