@@ -20,8 +20,6 @@ buildJava:
     
 dockerize:
   stage: build
-  dependencies:
-    - buildJava
   tags:
     - maastro
   script:
