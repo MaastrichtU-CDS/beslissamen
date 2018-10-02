@@ -1,4 +1,4 @@
-var loginCode = sessionStorage.getItem("loginCode");; 
+var loginCode = sessionStorage.getItem("loginCode"); 
 var isLoggedOn = sessionStorage.getItem("isLoggedOn");
 var session;
 
@@ -32,6 +32,7 @@ function validateLogin() {
     };
     httpRequest.open("GET", beslisSamenBackend + "/api/account/validate?loginCode=" + loginCode);
     httpRequest.send();
+    return false;
 };
 
 function loadLoginModal() {
