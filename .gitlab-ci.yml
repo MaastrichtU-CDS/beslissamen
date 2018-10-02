@@ -11,7 +11,7 @@ stages:
   - acceptance
   - release
 
-buildJava:
+buildBackend:
   stage: build
   image: maven:latest
   artifacts:
@@ -24,7 +24,7 @@ buildJava:
   only:
     - master
     
-dockerize:
+dockerizeBackend:
   stage: dockerize
   dependencies:
     - buildJava
@@ -32,10 +32,23 @@ dockerize:
     - maastro
   script:
     - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
-    - cp ./java/target/*.jar ./container/
-    - cd ./container/ && docker build --pull -t "$CI_REGISTRY_IMAGE/backend:$CI_COMMIT_SHA" .
+    - cp ./java/target/*.jar ./containers/backend/
+    - cd ./containers/backend/ && docker build --pull -t "$CI_REGISTRY_IMAGE/backend:$CI_COMMIT_SHA" .
     - docker tag "$CI_REGISTRY_IMAGE/backend:$CI_COMMIT_SHA" "$CI_REGISTRY_IMAGE/backend:$CI_COMMIT_REF_SLUG"
     - docker push "$CI_REGISTRY_IMAGE/backend:$CI_COMMIT_SHA"
     - docker push "$CI_REGISTRY_IMAGE/backend:$CI_COMMIT_REF_SLUG"
+  only:
+    - master
+
+dockerizeFrontend:
+  stage: dockerize
+  tags:
+    - maastro
+  script:
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+    - cd ./containers/frontend/ && docker build --pull -t "$CI_REGISTRY_IMAGE/frontend:$CI_COMMIT_SHA" .
+    - docker tag "$CI_REGISTRY_IMAGE/frontend:$CI_COMMIT_SHA" "$CI_REGISTRY_IMAGE/frontend:$CI_COMMIT_REF_SLUG"
+    - docker push "$CI_REGISTRY_IMAGE/frontend:$CI_COMMIT_SHA"
+    - docker push "$CI_REGISTRY_IMAGE/frontend:$CI_COMMIT_REF_SLUG"
   only:
     - master
