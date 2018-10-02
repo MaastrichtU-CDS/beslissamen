@@ -27,7 +27,7 @@ buildBackend:
 dockerizeBackend:
   stage: dockerize
   dependencies:
-    - buildJava
+    - buildBackend
   tags:
     - maastro
   script:
