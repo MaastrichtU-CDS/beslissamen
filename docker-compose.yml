@@ -14,7 +14,7 @@ services:
         links:
             - beslis_db:dbhost
         volumes:
-            - ./container/application.yml:/app/application.yml
+            - ./containers/backend/application.yml:/app/application.yml
         depends_on:
             - "beslis_db"
     beslis_frontend:
