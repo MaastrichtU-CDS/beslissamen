@@ -34,3 +34,4 @@ cors.allowed-origins:
     - https://beslissamen.nl
     - http://www.beslissamen.nl
     - https://www.beslissamen.nl
+    - http://localhost
