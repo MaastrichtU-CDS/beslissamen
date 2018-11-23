@@ -2,7 +2,7 @@ var loginCode = sessionStorage.getItem("loginCode");
 var isLoggedOn = sessionStorage.getItem("isLoggedOn");
 var session;
 
-var beslisSamenBackend = "http://beslissamen.nl:8081";
+var beslisSamenBackend = "http://localhost:8081";
 
 $(document).ready(function() {
     if (isLoggedOn && loginCode) {

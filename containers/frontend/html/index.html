@@ -87,17 +87,24 @@
 					<p>Bent u doorverwezen door een arts? Kies dan het voor u relevante keuzehulpmiddel door op een van de onderste knoppen te klikken.</p>
 
 				<div class="row" id="toolsOverview">
-                    <div class="col-lg-4 col-md-6 col-sm-6 toolColumn ">
-                        <div class="dropdown">
-                          <div class="PDAicon" id="PDAicon_Borst"></div>
-                          <div class="dropdown-content">
-                              <a href="#" data-toggle="modal" data-target="#modal_KeuzehulpLaunch" data-redirect-url="pda_launch.html?pda=pda/borst/rt/launch.html">
-                                <div class="PDAicon" id="PDAicon_Borst_Radiotherapie"></div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 toolColumn">
+                        <div>
+                            <a href="#" data-toggle="dropdown">
+                                <div class="PDAicon" id="PDAicon_Borst"></div>
                             </a>
-                            <a href="#" data-toggle="modal" data-target="#modal_KeuzehulpLaunch" data-redirect-url="pda_launch.html?pda=tools/pda_borstnazorg_nl/story_html5.html">
-                                <div class="PDAicon"  id="PDAicon_Borst_Nazorg"></div>
-                            </a>
-                          </div>
+                            <ul class="dropdown-menu" role="menu">
+                              <li role="presentation">
+                                <a href="#" data-toggle="modal" data-target="#modal_KeuzehulpLaunch" data-redirect-url="pda_launch.html?pda=pda/borst/rt/launch.html">
+                                    <div class="PDAicon" id="PDAicon_Borst_Radiotherapie"></div>
+                                </a>
+                              </li>
+                              <p>
+                              <li role="presentation">
+                                <a href="#" data-toggle="modal" data-target="#modal_KeuzehulpLaunch" data-redirect-url="pda_launch.html?pda=tools/pda_borstnazorg_nl/story_html5.html">
+                                    <div class="PDAicon" id="PDAicon_Borst_Nazorg"></div>
+                                </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6 toolColumn">
@@ -247,8 +254,6 @@
 
 
 <script type="text/javascript" src="temporaryPassword.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
-<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script async src="scrollspy.js"></script>
 <script type="text/javascript">
    $('#modal_KeuzehulpLaunch').on('show.bs.modal', function(e) {
