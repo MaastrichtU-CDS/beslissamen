@@ -8,7 +8,7 @@ services:
             - POSTGRES_USER=beslissamen
             - POSTGRES_PASSWORD=AblexaVerEsT
     beslis_backend:
-        image: registry.gitlab.com/medicaldataworks/beslissamen/backend
+        image: registry.gitlab.com/medicaldataworks/beslissamen/backend:master
         ports:
             - 8081:8081
         links:
@@ -18,6 +18,6 @@ services:
         depends_on:
             - "beslis_db"
     beslis_frontend:
-        image: registry.gitlab.com/medicaldataworks/beslissamen/frontend
+        image: registry.gitlab.com/medicaldataworks/beslissamen/frontend:master
         ports:
             - 80:80
