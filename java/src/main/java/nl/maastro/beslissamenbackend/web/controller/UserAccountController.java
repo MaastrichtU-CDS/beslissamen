@@ -18,7 +18,7 @@ import nl.maastro.beslissamenbackend.repository.UserAccountRepository;
 public class UserAccountController {
     
     private static final Logger logger = LogManager.getLogger(UserAccountController.class);
-    
+    private static final int LOGINCODE_LENGTH = 5;
     private UserAccountRepository userAccountRepository;
     
     public UserAccountController(UserAccountRepository userAccountRepository) {
@@ -50,7 +50,7 @@ public class UserAccountController {
     }
     
     private String generateLoginCode() {
-        String loginCode = RandomStringUtils.randomAlphanumeric(8).toLowerCase();
+        String loginCode = RandomStringUtils.randomNumeric(LOGINCODE_LENGTH);
         if (userAccountRepository.findByLoginCode(loginCode) == null) {
             return loginCode;
         } else {
