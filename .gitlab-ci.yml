@@ -56,7 +56,7 @@ deployAcceptance:
   stage: deploy
   environment:
     name: acceptance
-    url: acc.beslissamen.nl
+    url: https://acc.beslissamen.nl
   tags:
     - web-maastro-01
   script:
