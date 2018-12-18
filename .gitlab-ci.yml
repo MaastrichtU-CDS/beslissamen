@@ -8,8 +8,7 @@ services:
 stages:
   - build
   - dockerize
-  - acceptance
-  - release
+  - deploy
 
 buildBackend:
   stage: build
@@ -50,5 +49,18 @@ dockerizeFrontend:
     - docker tag "$CI_REGISTRY_IMAGE/frontend:$CI_COMMIT_SHA" "$CI_REGISTRY_IMAGE/frontend:$CI_COMMIT_REF_SLUG"
     - docker push "$CI_REGISTRY_IMAGE/frontend:$CI_COMMIT_SHA"
     - docker push "$CI_REGISTRY_IMAGE/frontend:$CI_COMMIT_REF_SLUG"
+  only:
+    - master
+
+deployAcceptance:
+  stage: deploy
+  environment:
+    name: acceptance
+    url: acc.beslissamen.nl
+  tags:
+    - web-maastro-01
+  script:
+    - sh run_scripts/acc/setup_base.sh
+    - sh run_scripts/acc/setup_application.sh $CI_COMMIT_REF_SLUG
   only:
     - master
