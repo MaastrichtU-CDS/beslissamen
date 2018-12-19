@@ -260,7 +260,7 @@ h2 {
 }
 
 #PDAicon_Long {
-   background-image: url('images/cancericon_long.png');
+   background-image: url('images/cancericon_long_gray.png');
    background-size: cover;
 }
 
@@ -280,7 +280,7 @@ h2 {
 }
 
 #PDAicon_Trial {
-   background-image: url('images/cancericon_trial.png');
+   background-image: url('images/cancericon_trial_gray.png');
    background-size: cover;
 }
 
