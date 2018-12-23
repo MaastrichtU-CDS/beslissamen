@@ -11,11 +11,11 @@ docker run -d \
     --network=beslissamen_acc \
     -v $(pwd)/containers/backend/application.yml:/app/application.yml \
     --link beslis_acc_db:dbhost \
-    -p 8081:8081 \
+    -p 20081:8081 \
     registry.gitlab.com/medicaldataworks/beslissamen/backend:$1
 
 docker run -d \
     --name beslis_acc_frontend \
     --network=beslissamen_acc \
-    -p 80:80 \
+    -p 20080:80 \
     registry.gitlab.com/medicaldataworks/beslissamen/frontend:$1
