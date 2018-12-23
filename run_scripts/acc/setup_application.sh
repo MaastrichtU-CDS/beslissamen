@@ -9,7 +9,7 @@ docker rm beslis_acc_frontend
 docker run -d \
     --name beslis_acc_backend \
     --network=beslissamen_acc \
-    -v $(pwd)/containers/backend/application.yml:/app/application.yml \
+    -v /data/beslissamen/acc/containers/backend/application.yml:/app/application.yml \
     --link beslis_acc_db:dbhost \
     -p 20081:8081 \
     registry.gitlab.com/medicaldataworks/beslissamen/backend:$1
