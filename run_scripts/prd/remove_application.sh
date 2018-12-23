@@ -1,0 +1,4 @@
+docker stop beslis_prd_backend
+docker rm beslis_prd_backend
+docker stop beslis_prd_frontend
+docker rm beslis_prd_frontend
