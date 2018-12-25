@@ -1,3 +1,10 @@
+dbRunning=$(docker inspect -f '{{.State.Running}}' beslis_acc_db)
+if [$dbRunning == "true"]
+then
+    echo "Skipping base setup"
+    exit 0
+fi
+
 postgresPass=$(</data/beslissamen/acc/containers/mysql/password.txt)
 
 docker network create beslissamen_acc
