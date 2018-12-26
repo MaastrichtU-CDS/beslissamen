@@ -1,5 +1,7 @@
+#!/bin/bash
+
 dbRunning=$(docker inspect -f '{{.State.Running}}' beslis_acc_db)
-if [$dbRunning == "true"]
+if [[ $dbRunning == "true" ]]
 then
     echo "Skipping base setup"
     exit 0
