@@ -79,6 +79,6 @@ deployProduction:
     - web-maastro-01
   script:
     - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
-    - bash run_scripts/acc/setup_application.sh $CI_COMMIT_SHA
+    - bash run_scripts/prd/setup_application.sh $CI_COMMIT_SHA
   only:
     - master
