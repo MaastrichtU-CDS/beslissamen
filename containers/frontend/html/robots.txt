@@ -1,8 +1,0 @@
-User-agent: *
-Disallow: /tools/
-Disallow: /tools/pda_borstradiotherapie_nl/story_html5.html
-Disallow: /tools/pda_borstnazorg_nl/story_html5.html
-Disallow: /tools/pda_lung_en/index.html
-Disallow: /tools/pda_prostaat_nl/story_html5.html
-Disallow: /tools/pda_larynx_nl/index.html
-Disallow: /tools/pda_trial_nl/trial.html
