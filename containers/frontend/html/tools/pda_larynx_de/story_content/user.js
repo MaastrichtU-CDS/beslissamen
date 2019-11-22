@@ -2,13 +2,13 @@ function ExecuteScript(strId)
 {
   switch (strId)
   {
-      case "6T2KYADaLCe":
+      case "5yLd7Eh05hL":
         Script1();
         break;
-      case "6WJlIwOII0N":
+      case "60RChlgmh5o":
         Script2();
         break;
-      case "6B0IJXY6rPo":
+      case "67YCdqk8NRe":
         Script3();
         break;
   }
@@ -34,17 +34,17 @@ var dobYear = res[2];
 
 // CHECK IF VALUES OR OK
 if(dobDay < 1 || dobDay > 31 || isNaN(dobDay) || isNotInt(dobDay)){ 
-    alert("Voer een geldige dag in!");
+    alert("Geben Sie ein gültiges Jahr ein!");
     player.SetVar("Profile_Leeftijd", 0 );
     return false; 
 }
 if(dobMonth < 1 || dobMonth > 12 || isNaN(dobMonth) || isNotInt(dobMonth)){ 
-    alert("Voer een geldige maand in!");
+    alert("Geben Sie ein gültiges Jahr ein!");
     player.SetVar("Profile_Leeftijd", 0 );
     return false; 
 }
 if(dobYear < 1900 || dobYear > todayYear || isNaN(dobYear) || isNotInt(dobYear)){ 
-    alert("Voer een geldig jaar in!");
+    alert("Geben Sie ein gültiges Jahr ein!");
     player.SetVar("Profile_Leeftijd", 0 );
     return false; 
 }
