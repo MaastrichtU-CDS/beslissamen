@@ -13,7 +13,7 @@
         <options>
           <option name="title_enabled" value="true">
             <options>
-              <option name="title_text" value="Auswahlhilfe Kehlkopfkrebs" />
+              <option name="title_text" value="PDA_Larynx_v2German11-11-2020" />
             </options>
           </option>
           <option name="logo_enabled" value="false">
@@ -60,6 +60,7 @@
           <option name="seekbar" value="false">
             <options>
               <option name="readonly" value="false" />
+              <option name="readonlyOnce" value="false" />
             </options>
           </option>
           <option name="search" value="false" />
@@ -1118,56 +1119,76 @@
           </color>
         </group_colors>
       </color_group>
+      <color_group name="accessibility">
+        <group_colors>
+          <color name="focus_rect">
+            <fill type="linear" rotation="90">
+              <colors>
+                <color rgb="0xFFFF00" alpha="100" stop="0" />
+              </colors>
+            </fill>
+          </color>
+        </group_colors>
+      </color_group>
     </colorscheme>
   </colorschemes>
   <string_tables>
     <string_table name="npnxnanbnsnfns00000000001">
-      <string id="acc_active">actief</string>
-      <string id="check_include">Controleer</string>
-      <string id="clear">Helder en terug te keren naar Menu</string>
-      <string id="close">Sluiten</string>
-      <string id="acc_closed_captions">Bijschriften. Druk op de spatiebalk om bijschriften in en uit te schakelen.</string>
-      <string id="continue">Doorgaan</string>
-      <string id="continueresponsive">Doorgaan</string>
-      <string id="exit">Afsluiten</string>
+      <string id="acc_active">aktiv</string>
+      <string id="check_include">Überprüfen</string>
+      <string id="clear">Löschen</string>
+      <string id="close">Schließen</string>
+      <string id="acc_closed_captions">Geschlossene Untertitel. Drücken Sie die Leertaste, um die Untertitel an- und oder auszuschalten.</string>
+      <string id="continue">Fortfahren</string>
+      <string id="continueresponsive">Fortfahren</string>
+      <string id="exit">Verlassen</string>
       <string id="filter">Filter</string>
-      <string id="finish">VOLTOOIEN</string>
-      <string id="acc_finish">voltooien</string>
-      <string id="definition">Definitie</string>
-      <string id="acc_definition">definitie</string>
-      <string id="glossary">Woordenlijst</string>
-      <string id="terms">Voorwaarden</string>
-      <string id="outline">Menu</string>
-      <string id="disabled_orientation">Draai uw apparaat</string>
-      <string id="next">VOLGENDE</string>
-      <string id="acc_next">Volgende</string>
-      <string id="transcript_chk">Notes</string>
-      <string id="transcript">Notes</string>
+      <string id="finish">BEENDEN</string>
+      <string id="acc_finish">beenden</string>
+      <string id="definition">Definition</string>
+      <string id="acc_definition">definition</string>
+      <string id="glossary">Glossar</string>
+      <string id="terms">Begriffe</string>
+      <string id="action">Aktion</string>
+      <string id="keyboardshortcuts">Tastenkombinationen</string>
+      <string id="shortcuthelp">Tastenkombinationen anzeigen</string>
+      <string id="shortcut">Tastenkombination</string>
+      <string id="togglezoom">Zoom-Modus wechseln</string>
+      <string id="outline">Menü</string>
+      <string id="disabled_orientation">Bitte drehen Sie das Gerät</string>
+      <string id="next">WEITER</string>
+      <string id="acc_next">nächste</string>
+      <string id="transcript_chk">Notizen</string>
+      <string id="transcript">Notizen</string>
       <string id="bio">Bio</string>
-      <string id="more_info">Meer informatie</string>
-      <string id="closed_captions">Bijschriften</string>
-      <string id="acc_pause">pauze</string>
-      <string id="acc_play">spelen</string>
-      <string id="send_an_email">Een e-mail versturen</string>
-      <string id="prev">VORIGE</string>
-      <string id="acc_previous">vorige</string>
-      <string id="question_list">Vragenlijst</string>
-      <string id="acc_replay">replay</string>
-      <string id="resources">Resources</string>
-      <string id="acc_resources">middelen</string>
-      <string id="restart">Hervatten</string>
-      <string id="resume">Hervatten</string>
-      <string id="search">Zoek ...</string>
-      <string id="acc_search_input">zoeken</string>
-      <string id="search_in">Zoek in:</string>
-      <string id="search_results">Zoekresultaten</string>
-      <string id="acc_skipnavigation">Navigatie overslaan. Klik op enter om terug te keren naar de dia.</string>
-      <string id="slide_text_chk">Schuif tekst</string>
-      <string id="submitall">ALLES INDIENEN</string>
-      <string id="acc_submitall">alles indienen</string>
-      <string id="submit">INDIENEN</string>
-      <string id="acc_submit">submit</string>
-      <string id="acc_volume">volume</string>
+      <string id="more_info">Weitere Informationen</string>
+      <string id="closed_captions">Untertitel</string>
+      <string id="acc_pause">pause</string>
+      <string id="acc_play">spielen</string>
+      <string id="send_an_email">E-Mail senden</string>
+      <string id="prev">ZURÜCK</string>
+      <string id="acc_previous">vorherigen</string>
+      <string id="question_list">Liste der Fragen</string>
+      <string id="acc_replay">erneute wiedergabe</string>
+      <string id="resources">Ressourcen</string>
+      <string id="acc_resources">ressourcen</string>
+      <string id="restart">Neustart</string>
+      <string id="resume">Fortsetzen</string>
+      <string id="acc_search_input">suche</string>
+      <string id="search_toggle">Suchen</string>
+      <string id="sidebar_toggle">Seitenleiste ein-/ausblenden</string>
+      <string id="desktop_start">Kurs starten</string>
+      <string id="mobile_start">Kurs starten</string>
+      <string id="search">Suche...</string>
+      <string id="search_in">Suche in:</string>
+      <string id="search_results">Suchergebnisse</string>
+      <string id="acc_skipnavigation">Navigation überspringen. Eingabetaste drücken, um zur Folie zurückzukehren.</string>
+      <string id="slide_text_chk">Folientext</string>
+      <string id="submitall">ALLES SENDEN</string>
+      <string id="acc_submitall">alles senden</string>
+      <string id="submit">SENDEN</string>
+      <string id="acc_submit">senden</string>
+      <string id="acc_volume">Lautstärke</string>
     </string_table>
   </string_tables>
   <fonts>
