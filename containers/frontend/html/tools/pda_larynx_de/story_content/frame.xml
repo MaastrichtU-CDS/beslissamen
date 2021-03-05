@@ -13,7 +13,7 @@
         <options>
           <option name="title_enabled" value="true">
             <options>
-              <option name="title_text" value="PDA_Larynx_v2German11-11-2020" />
+              <option name="title_text" value="PDA_Larynx_v2German_4-3-2021" />
             </options>
           </option>
           <option name="logo_enabled" value="false">
@@ -71,6 +71,7 @@
               <option name="font" value="Open Sans" />
             </options>
           </option>
+          <option name="settings" value="true" />
         </options>
       </optiongroup>
       <optiongroup name="bottombaroptions">
