@@ -95,13 +95,19 @@
                             <ul class="dropdown-menu" role="menu">
                               <li role="presentation">
                                 <a href="#" data-toggle="modal" data-target="#modal_KeuzehulpLaunch" data-redirect-url="pda_launch.html?pda=tools/pda_borstradiotherapie_nl/story_html5.html">
-                                    <div class="PDAicon" id="PDAicon_Borst_Radiotherapie"></div>
+                                    <p>Borstkanker radiotherapie (Nederlands)</p>
+                                </a>
+                              </li>
+                              <p>
+                              <li role="presentation">
+                                <a href="#" data-toggle="modal" data-target="#modal_KeuzehulpLaunch_en" data-redirect-url="pda_launch.html?pda=tools/pda_borstradiotherapie_en/story.html">
+                                    <p>Breastcancer radiotherapy (English)</p>
                                 </a>
                               </li>
                               <p>
                               <li role="presentation">
                                 <a href="#" data-toggle="modal" data-target="#modal_KeuzehulpLaunch" data-redirect-url="pda_launch.html?pda=tools/pda_borstnazorg_nl/story_html5.html">
-                                    <div class="PDAicon" id="PDAicon_Borst_Nazorg"></div>
+                                    <p>Borstkanker nazorg (Nederlands)</p>
                                 </a>
                                 </li>
                             </ul>
@@ -240,6 +246,27 @@
           </div>
         </div>
     </div>
+	
+    <div id="modal_KeuzehulpLaunch_en" class="modal fade" role="dialog">
+        <!-- Modal content-->
+        <div class="modal-content modal-dialog">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Terms of Use</h4>
+          </div>
+          <div class="modal-body">
+            <p>A decision aid is only for information purposes, and is not intended as (medical) advice. We urgently advice users to consult with your doctor, before making final choices.</p>
+            <p>As decision aids are only for information purposes, <SPAN STYLE="font-variant: small-caps;">MAASTRO                  clinic</SPAN> cannot and will not take any responsibility as a consequence of making decisions based on this decision aid.</p>
+            <p>Decision aids in English are freely translated from Dutch. Interpretation issues may apply.</p>
+            <input type="checkbox" id="terms-en" onchange="document.getElementById('continue-button-en').disabled = (this.checked != true);"/>
+            <label for="terms-en">I agree with the above Terms of Use.</label>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" name="continue-button-en" id="continue-button-en" disabled onclick="">Continue</button>
+          </div>
+        </div>
+    </div>
 
 	<div id="modal_Contact" class="modal fade" role="dialog">
 	    <!-- Modal content-->
@@ -282,6 +309,13 @@
       var continueButton = document.getElementById("continue-button");
       continueButton.setAttribute("onClick", "location.href='" + redirectUrl + "';");
       var checkbox = document.getElementById("terms");
+      checkbox.checked = "";
+   });
+   $('#modal_KeuzehulpLaunch_en').on('show.bs.modal', function(e) {
+      var redirectUrl = $(e.relatedTarget).data('redirect-url');
+      var continueButton = document.getElementById("continue-button-en");
+      continueButton.setAttribute("onClick", "location.href='" + redirectUrl + "';");
+      var checkbox = document.getElementById("terms-en");
       checkbox.checked = "";
    });
 </script>
