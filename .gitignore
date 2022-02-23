@@ -2,3 +2,4 @@ container/beslis-samen-backend-*.jar
 database/
 database_acc/
 database_prd/
+.DS_Store
