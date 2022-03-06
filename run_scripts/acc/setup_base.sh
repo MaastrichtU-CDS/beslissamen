@@ -2,7 +2,8 @@
 
 #dbRunning=$(docker inspect -f '{{.State.Running}}' beslis_acc_db)
 dbRunning=$(docker ps -aq -f name=beslis_acc_db)
-if [[ $dbRunning == "true" ]]
+#if [[ $dbRunning == "true" ]]
+if [[ ! -z "$dbRunning" ]]
 then
     echo "Skipping base setup"
     exit 0
