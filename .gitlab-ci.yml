@@ -6,39 +6,39 @@ services:
   - docker:dind
 
 stages:
-  - build
+  # - build
   - dockerize
   - deploy
   - deployProd
 
-buildBackend:
-  stage: build
-  image: maven:3.5.3-jdk-8
-  artifacts:
-    paths:
-      - java/target/*.jar
-  tags:
-    - maastro
-  script:
-    - cd ./java && mvn clean package
-  only:
-    - master
+# buildBackend:
+#   stage: build
+#   image: maven:3.5.3-jdk-8
+#   artifacts:
+#     paths:
+#       - java/target/*.jar
+#   tags:
+#     - maastro
+#   script:
+#     - cd ./java && mvn clean package
+#   only:
+#     - master
     
-dockerizeBackend:
-  stage: dockerize
-  dependencies:
-    - buildBackend
-  tags:
-    - maastro
-  script:
-    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
-    - cp ./java/target/*.jar ./containers/backend/
-    - cd ./containers/backend/ && docker build --pull -t "$CI_REGISTRY_IMAGE/backend:$CI_COMMIT_SHA" .
-    - docker tag "$CI_REGISTRY_IMAGE/backend:$CI_COMMIT_SHA" "$CI_REGISTRY_IMAGE/backend:$CI_COMMIT_REF_SLUG"
-    - docker push "$CI_REGISTRY_IMAGE/backend:$CI_COMMIT_SHA"
-    - docker push "$CI_REGISTRY_IMAGE/backend:$CI_COMMIT_REF_SLUG"
-  only:
-    - master
+# dockerizeBackend:
+#   stage: dockerize
+#   dependencies:
+#     - buildBackend
+#   tags:
+#     - maastro
+#   script:
+#     - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+#     - cp ./java/target/*.jar ./containers/backend/
+#     - cd ./containers/backend/ && docker build --pull -t "$CI_REGISTRY_IMAGE/backend:$CI_COMMIT_SHA" .
+#     - docker tag "$CI_REGISTRY_IMAGE/backend:$CI_COMMIT_SHA" "$CI_REGISTRY_IMAGE/backend:$CI_COMMIT_REF_SLUG"
+#     - docker push "$CI_REGISTRY_IMAGE/backend:$CI_COMMIT_SHA"
+#     - docker push "$CI_REGISTRY_IMAGE/backend:$CI_COMMIT_REF_SLUG"
+#   only:
+#     - master
 
 dockerizeFrontend:
   stage: dockerize
@@ -62,7 +62,7 @@ deployAcceptance:
     - web-maastro-01
   script:
     - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
-    - bash run_scripts/acc/setup_base.sh
+    # - bash run_scripts/acc/setup_base.sh
     - bash run_scripts/acc/setup_application.sh $CI_COMMIT_SHA
   only:
     - master
