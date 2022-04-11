@@ -284,6 +284,11 @@ h2 {
    background-size: cover;
 }
 
+#PDAicon_Keel {
+	background-image: url('images/cancericon_keel.png');
+	background-size: cover;
+ }
+
 .flexer{
     display: flex;
     flex-direction: row;    
