@@ -17,5 +17,6 @@ docker rm beslis_prd_frontend
 docker run -d \
     --name beslis_prd_frontend \
     --network=beslissamen_prd \
+    --restart always \
     -p 30080:80 \
     registry.gitlab.com/medicaldataworks/beslissamen/frontend:$1
