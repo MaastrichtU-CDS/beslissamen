@@ -37,7 +37,7 @@ jobs:
         with:
           context: ./containers/frontend
           push: true
-          tags: ghcr.io/${{ env.REPO }}:${{ github.sha }}
+          tags: ghcr.io/${{ env.REPO }}/frontend:${{ github.sha }}
       - name: Build container
         id: docker_build_main
         uses: docker/build-push-action@v2
@@ -45,4 +45,4 @@ jobs:
         with:
           context: ./containers/frontend
           push: true
-          tags: ghcr.io/${{ env.REPO }}:${{ github.sha }}, ghcr.io/${{ env.REPO }}:latest
+          tags: ghcr.io/${{ env.REPO }}/frontend:${{ github.sha }}, ghcr.io/${{ env.REPO }}/frontend:latest
