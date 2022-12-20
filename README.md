@@ -1,6 +1,3 @@
-**Repository location moved! Please check [https://github.com/mdw-nl/beslissamen](https://github.com/mdw-nl/beslissamen)**
-**Repository location moved! Please check [https://github.com/mdw-nl/medicaldataworks_beslissamen](https://github.com/mdw-nl/medicaldataworks_beslissamen)**
-**Repository location moved! Please check [https://github.com/mdw-nl/beslissamen](https://github.com/mdw-nl/beslissamen)**
 # beslissamen
 
 Hosting info for beslissamen.nl
