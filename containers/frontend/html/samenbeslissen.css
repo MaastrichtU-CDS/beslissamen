@@ -260,12 +260,12 @@ h2 {
 }
 
 #PDAicon_Long {
-   background-image: url('images/cancericon_long.png');
+   background-image: url('images/cancericon_long_gray.png');
    background-size: cover;
 }
 
 #PDAicon_Prostaat {
-   background-image: url('images/cancericon_prostaat.png');
+   background-image: url('images/cancericon_prostaat_gray.png');
    background-size: cover;
 }
 
